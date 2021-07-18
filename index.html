@@ -24,16 +24,15 @@
             These "day names" have further meaning concerning the soul and the character of the person.<br />
             The world has gotten so complex that many of us have lost touch with such aspects of our culture. <br />
             <br />
-            In case, sometimes, you wonder what your Akan name is(according to this culture) or what it would be(for
-            <br />
-            non-Ghanian people)...then you are in the right place.
+            In case, sometimes, you wonder what your Akan name is(according to this culture)...then you are in the right
+            place.
         </p>
         <div class="card form-input">
             <form action="">
                 <div class="user-input">
                     <label for="name" class="form-label">Enter your name:
                         <input type="text" class="form-control form-control-lg" id="name"
-                            placeholder="please enter your name: " required/>
+                            placeholder="please enter your name: " required />
                     </label>
                 </div>
                 <div class="user-input">
@@ -52,11 +51,11 @@
                 </div>
                 <div class="user-input">
                     <label for="dob" class="form-label">Date of Birth:
-                        <input type="date" class="form-control form-control-lg" id="dob"
-                            placeholder="Date of Birth: " required/>
+                        <input type="text" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="form-control form-control-lg" id="dob" placeholder="YYYY-MM-DD "
+                            required />
                     </label>
                 </div>
-                <button type="button" class="button">Submit</button>
+                <button type="button" class="button" onclick="collectInput()">Submit</button>
             </form>
         </div>
 
@@ -64,6 +63,7 @@
             <h3></h3>
             <p></p>
         </div>
+        <script src="js/script.js"></script>
     </body>
 </body>
 
