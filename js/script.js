@@ -7,7 +7,7 @@ function collectInput(){
      * YYYY-MM-DD
      * parameter is the array version of the string input
     */
-     alert("You were born on day " + calculateDay(parameter) + " of the week.");
+     alert("You were born on day " + calculateDay(parameter) + " of the week and your akanname is: " + determineName());
 }
 
 function calculateDay(dob){
@@ -21,4 +21,20 @@ function calculateDay(dob){
     
     let day = Math.floor((century + year + month + (parseInt(dob[8] + dob[9]))) % 7);
     return day;
+}
+let day = calculateDay(document.getElementById("dob").value);
+
+function determineName(){
+    let gender = document.querySelector('input[name=male-female]:checked').value;
+    let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+    let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+    let akanName, i;
+
+    if(gender === "male") {
+        akanName = maleNames[day];
+    }
+    else if(gender === "female"){
+        akanName = femaleNames[day];
+    }
+    return akanName;
 }
