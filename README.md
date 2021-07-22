@@ -10,6 +10,9 @@ Akan Name Finder is a web based web application that generates your akan name wh
 * Live server for seemless development
 ## Known Bugs
 Mis-calculation of the week's day.
+## TO DO
+- Resolve the current bug.
+- Add validation functionality.
 ## Technologies Used
 - HTML
 - CSS
