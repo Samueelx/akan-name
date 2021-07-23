@@ -2,6 +2,8 @@ function collectInput(){
     let name = document.getElementById("name").value;
     let gender = document.querySelector('input[name=male-female]:checked').value;
     let dob = document.getElementById("dob").value;
+    //validation.
+    
     output();
 }
 
@@ -43,6 +45,7 @@ function generateAkanName(){
     }
     return akanName;
 }
+
 function output(){
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     let name = document.getElementById("name").value;
