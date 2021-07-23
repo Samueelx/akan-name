@@ -2,8 +2,7 @@ function collectInput(){
     let name = document.getElementById("name").value;
     let gender = document.querySelector('input[name=male-female]:checked').value;
     let dob = document.getElementById("dob").value;
-    generateAkanName();
-    //Data Validation
+    output();
 }
 
 function findBirthDay(){
@@ -26,7 +25,6 @@ function findBirthDay(){
 
 function generateAkanName(){
     let gender = document.querySelector('input[name=male-female]:checked').value;
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     let femaleNames = ["Akosua", "Adwoa", " Abenaa", " Akua", "Yaa", "Afua", " Ama"];
     let day = findBirthDay();
@@ -34,13 +32,22 @@ function generateAkanName(){
     let akanName = "";
     if (gender === "male") {
         akanName = maleNames[day];
-        alert(akanName);
+        //alert(akanName);
     }
     else if (gender === "female") {
         akanName = femaleNames[day];
-        alert(akanName);
+        //alert(akanName);
     }
     else {
         alert("Oops! Something went wrong");
     }
+    return akanName;
+}
+function output(){
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    let name = document.getElementById("name").value;
+    let day = findBirthDay();
+
+    document.getElementById("h3-output").innerHTML = "Voilà!";
+    document.getElementById("p-output").innerHTML ="Hello, " + name + ", you were born on a " + days[day] + " thus your Akan name is: " +generateAkanName();
 }
