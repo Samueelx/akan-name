@@ -2,11 +2,12 @@ function collectInput(){
     let name = document.getElementById("name").value;
     let gender = document.querySelector('input[name=male-female]:checked').value;
     let dob = document.getElementById("dob").value;
-    findBirthDay(dob);
+    generateAkanName();
     //Data Validation
 }
 
-function findBirthDay(dob){
+function findBirthDay(){
+    let dob = document.getElementById("dob").value;
     let stringArray = dob.split("-");
     let dateArray = stringArray.map( (date) => {
         return parseInt(date);
@@ -20,7 +21,7 @@ function findBirthDay(dob){
 
     //Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
     let day = Math.floor((((cc/4) - 2*cc-1) + (5*yy/4) + (26*(dateArray[1] + 1)/10) + dateArray[2]) % 7);
-    //return date;
+    return day;
 }
 
 function generateAkanName(){
@@ -28,6 +29,18 @@ function generateAkanName(){
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     let femaleNames = ["Akosua", "Adwoa", " Abenaa", " Akua", "Yaa", "Afua", " Ama"];
+    let day = findBirthDay();
 
-    
+    let akanName = "";
+    if (gender === "male") {
+        akanName = maleNames[day];
+        alert(akanName);
+    }
+    else if (gender === "female") {
+        akanName = femaleNames[day];
+        alert(akanName);
+    }
+    else {
+        alert("Oops! Something went wrong");
+    }
 }
