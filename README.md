@@ -9,16 +9,16 @@ Akan Name Finder is a web based web application that generates your akan name wh
 * Visual Studio or any code editor of your choice
 * Live server for seemless development
 ## Known Bugs
-Mis-calculation of the week's day.
+No known bugs
 ## TO DO
-- Resolve the current bug.
-- Add validation functionality.
+- Add some validation functionality.
 ## Technologies Used
 - HTML
 - CSS
+- Bootstrap
 - JavaScript
 ## Support and contact details
-{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}
+[Find me on LinkedIn](https://linkedin.com/)
 ### License
 * [MIT](https://github.com/Samueelx/akan-name/blob/master/LICENCE)
 Copyright (c) 2021 **Samuel Gitimu**
